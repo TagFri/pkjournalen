@@ -1,0 +1,101 @@
+/* CSS RESETS*/
+h1, h2, h3, body {margin: 0;padding: 0;}
+footer {margin: 0;padding:5px;}
+
+/* GENERAL FONT SETTING */
+body {font-family: "Roboto", sans-serif;font-style: normal; text-align: center}
+
+/* FONT WEIGHTS */
+.roboto-light {font-weight: 300;}
+.roboto-medium {font-weight: 500;}
+.roboto-bold {font-weight: 700;}
+
+/* LAYOUT */
+header, #title {
+    display: flex;
+}
+
+#title {
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* DESIGN */
+header, footer {
+    background-color: #20232A;
+    color: white;
+    justify-content: center;
+}
+
+.small {
+    font-size: 0.7em;
+}
+
+main {
+    padding: 20px;
+}
+
+iframe {
+    border-radius: 50px;
+    padding: 5%;
+}
+
+.calender {
+    margin: 0 auto;
+}
+
+#calenderLarge {
+    max-width: 900px;
+}
+
+#calenderMedium {
+    max-width: 90%;
+}
+
+#calenderSmall {
+    max-width: 95%;
+}
+
+
+@media only screen and (min-width: 992px) {
+    header {
+        padding: 0.75rem 0;
+    }
+    img {
+        height: 80px;
+    }
+    body {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    header {
+        padding: 1rem 0;
+    }
+    img {
+        height: 60px;
+    }
+    body {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    #calenderSmall, #calenderMedium {
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+    #calenderSmall, #calenderLarge {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #calenderMedium, #calenderLarge {
+        display: none;
+    }
+}

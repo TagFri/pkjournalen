@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PK-journalen</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <img src="logo_white.png" alt="logo"/>
+    <div id="title">
+        <h1 class="roboto-bold">PK Jorunalen</h1>
+        <h3 class="roboto-light">Samlingskalender for alle foreninger</h3>
+    </div>
+</header>
+<main>
+    <div id="calenderLarge" class="calender"></div>
+    <div id="calenderMedium" class="calender"></div>
+    <div id="calenderSmall" class="calender"></div>
+    <h3 class="roboto-medium">Ønsker foreningen din å være med?</h3>
+    <p class="roboto-light">Send en mail til hei (snabelkrøll) sablateknisk.no</p>
+</main>
+<footer>
+    <p class="roboto-medium">En enkel side av PK Studentlag</p>
+    <p class="roboto-bold small">Sabla Flott AS</p>
+</footer>
+<script>
+    //Library of included calenders. Value is each calender-id from google.
+    //If more than 23 calenders => update color variable with more values
+    const calenderIDs = [
+        /* MF           */ "c_2051a90d8048c03d1e8737a35908fcc3c41ac4c90f417ca6d8dbc3a229720f4f@group.calendar.google.com",
+        /* LIK Klatring */ "c_d6514d15f64d3d9af78da85c059a26fa07eb79b76e54cd88f2d386c5f07d472e@group.calendar.google.com",
+        /* MSO          */ "c_b390de1204fabb156b7cada2ef7b65271e7949f7c774e32cd042190c2506ea30@group.calendar.google.com",
+        /* MVL          */ "c_b08d176727bd77fc6403169ac89e220d2da24f3043371754387f92c5f3cc025d@group.calendar.google.com"
+    ]
+
+    //Color library to apply to each individual calender:
+    const colors = ["#039BE5","#D81B60","#F6BF26","#E4C441","#4285F4","#D50000","#F09300","#7986CB","#795548","#F4511E","#F09300","#795548","#AD1457","#616161","#B39DDB","#9E69AF","#7CB342","#7CB342","#F4511E","#4285F4","#D50000","#A79B8E","#F4511E"]
+
+    //Size library for each desired calender size
+    const size = {
+        "small": [800, 300],
+        "medium": [600, 500],
+        "large": [600, 1000],
+        "large_agenda": [600, 300] // Height = large
+    }
+
+    const mode = {
+        "week": "WEEK",
+        "month": "MONTH",
+        "agenda": "AGENDA"
+
+    }
+
+    //Final calenders:
+    let largeCalender = ""
+    let largeAgendaCalender = ""
+    let mediumCalender = ""
+    let smallCalender = ""
+
+    //Function to combine all calenders ID's and colors
+    function assembleCollection(calenderArray, colorArray) {
+        let combinedCalenders = ""
+        let combinedColors = ""
+        //Add their uniq ID's and colors
+        calenderArray.forEach( (calender, index) => {
+            combinedCalenders += "&src="+calender
+            combinedColors += "&color="+colorArray[index]
+        })
+        combinedCalenders += combinedColors
+        return combinedCalenders
+    }
+
+    function createFrame(calenderURLs, height, width, type) {
+        const iframe = document.createElement("iframe")
+        iframe.src = "https://calendar.google.com/calendar/embed?height=" + height + "&wkst=2&ctz=Europe%2FOslo&showPrint=0&title=Trykk%20under%20for%20%C3%A5%20abonnere%20p%C3%A5%20%C3%B8nsket%20foreningers%20kalender&showTz=0&mode=" + type + calenderURLs
+        iframe.style = "border-width:0"
+        iframe.width = width
+        iframe.height = height
+        iframe.frameBorder = 0
+        iframe.scrolling = "no"
+        return iframe
+    }
+
+    //Large calender
+    largeCalender = createFrame(assembleCollection(calenderIDs, colors), size.large[0], size.large[1], "MONTH")
+    largeCalender.setAttribute("id", "calenderLarge")
+    //Medium calender
+    mediumCalender = createFrame(assembleCollection(calenderIDs, colors), size.medium[0], size.medium[1], "MONTH")
+    mediumCalender.setAttribute("id", "calenderMedium")
+    //Small calender
+    smallCalender = createFrame(assembleCollection(calenderIDs, colors), size.small[0], size.small[1], "AGENDA")
+    smallCalender.setAttribute("id", "calenderSmall")
+    //Append all calenders to HTML
+    document.getElementById("calenderLarge").appendChild(largeCalender)
+    document.getElementById("calenderMedium").appendChild(mediumCalender)
+    document.getElementById("calenderSmall").appendChild(smallCalender)
+</script>
+</body>
+</html>
