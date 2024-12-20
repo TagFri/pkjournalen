@@ -1,4 +1,4 @@
-//Library of included calenders. Value is each calender-id from google.
+//Library of included calenders. Value is each calender-id from Google.
 //If more than 23 calenders => update color variable with more values
 const calenderIDs = [
     /* MF           */ "c_2051a90d8048c03d1e8737a35908fcc3c41ac4c90f417ca6d8dbc3a229720f4f@group.calendar.google.com",
@@ -7,25 +7,23 @@ const calenderIDs = [
     /* MVL          */ "c_b08d176727bd77fc6403169ac89e220d2da24f3043371754387f92c5f3cc025d@group.calendar.google.com",
     /* MMO          */ "c_89cae8b5864fa7125af85206234d3f5f8f06df8387d7b752048a8f0f179fa199@group.calendar.google.com",
     /* LIK          */ "c_664793b600968a1e36ba9cdaf03917882cac24057772e9d7934353ff7b4e5d48@group.calendar.google.com",
-    /* DD           */ "c_9b88431df7ae7198e2cb839a8c09cf7f7e3ab5438474f476cafb16830e472754@group.calendar.google.com"
+    /* DD           */ "c_9b88431df7ae7198e2cb839a8c09cf7f7e3ab5438474f476cafb16830e472754@group.calendar.google.com",
+    /* OAMS         */ "c_fc4894ab39af3f029e00684bee89a7f83c80fe44df2bd705a2ad1d0b3787256d@group.calendar.google.com"
+    /* NMF          */
+    /* OCS          */
+    /* SMI          */
+    /* SUM          */
 ]
 
-//Color library to apply to each individual calender:
+//Color library to apply to each individual calendar:
 const colors = ["#039BE5","#D81B60","#F6BF26","#E4C441","#4285F4","#D50000","#F09300","#7986CB","#795548","#F4511E","#F09300","#795548","#AD1457","#616161","#B39DDB","#9E69AF","#7CB342","#7CB342","#F4511E","#4285F4","#D50000","#A79B8E","#F4511E"]
 
-//Size library for each desired calender size
+//Size library for each desired calendar size
 const size = {
     "small": [500, 300],
     "medium": [600, 500],
     "large": [600, 1000],
     "large_agenda": [600, 300] // Height = large
-}
-
-const mode = {
-    "week": "WEEK",
-    "month": "MONTH",
-    "agenda": "AGENDA"
-
 }
 
 //Function to combine all calenders ID's and colors
@@ -52,13 +50,13 @@ function createFrame(calenderURLs, height, width, type) {
     return iframe
 }
 
-//Large calender
+//Large calendar
 let largeCalender = createFrame(assembleCollection(calenderIDs, colors), size.large[0], size.large[1], "MONTH")
 largeCalender.setAttribute("id", "calenderLarge")
-//Medium calender
+//Medium calendar
 let mediumCalender = createFrame(assembleCollection(calenderIDs, colors), size.medium[0], size.medium[1], "MONTH")
 mediumCalender.setAttribute("id", "calenderMedium")
-//Small calender
+//Small calendar
 let smallCalender = createFrame(assembleCollection(calenderIDs, colors), size.small[0], size.small[1], "AGENDA")
 smallCalender.setAttribute("id", "calenderSmall")
 //Append all calenders to HTML
