@@ -8,7 +8,8 @@ const calenderIDs = [
     /* MMO          */ "c_89cae8b5864fa7125af85206234d3f5f8f06df8387d7b752048a8f0f179fa199@group.calendar.google.com",
     /* LIK          */ "c_664793b600968a1e36ba9cdaf03917882cac24057772e9d7934353ff7b4e5d48@group.calendar.google.com",
     /* DD           */ "c_9b88431df7ae7198e2cb839a8c09cf7f7e3ab5438474f476cafb16830e472754@group.calendar.google.com",
-    /* OAMS         */ "c_fc4894ab39af3f029e00684bee89a7f83c80fe44df2bd705a2ad1d0b3787256d@group.calendar.google.com"
+    /* OAMS         */ "c_fc4894ab39af3f029e00684bee89a7f83c80fe44df2bd705a2ad1d0b3787256d@group.calendar.google.com",
+    /* Ascapella    */ "c_bce3633a2f7469a709d6d7162fb0e65e2ab049035b06e1e058cba59f973838dc@group.calendar.google.com"
     /* NMF          */
     /* OCS          */
     /* SMI          */
