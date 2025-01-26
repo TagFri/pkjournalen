@@ -1,6 +1,7 @@
 //Library of included calenders. Value is each calender-id from Google.
 //If more than 23 calenders => update color variable with more values
 const calenderIDs = [
+    /* INTERNE KALENDRE */
     /* MF           */ "c_2051a90d8048c03d1e8737a35908fcc3c41ac4c90f417ca6d8dbc3a229720f4f@group.calendar.google.com",
     /* LIK Klatring */ "c_d6514d15f64d3d9af78da85c059a26fa07eb79b76e54cd88f2d386c5f07d472e@group.calendar.google.com",
     /* MSO          */ "c_b390de1204fabb156b7cada2ef7b65271e7949f7c774e32cd042190c2506ea30@group.calendar.google.com",
@@ -9,11 +10,12 @@ const calenderIDs = [
     /* LIK          */ "c_664793b600968a1e36ba9cdaf03917882cac24057772e9d7934353ff7b4e5d48@group.calendar.google.com",
     /* DD           */ "c_9b88431df7ae7198e2cb839a8c09cf7f7e3ab5438474f476cafb16830e472754@group.calendar.google.com",
     /* OAMS         */ "c_fc4894ab39af3f029e00684bee89a7f83c80fe44df2bd705a2ad1d0b3787256d@group.calendar.google.com",
-    /* Ascapella    */ "c_bce3633a2f7469a709d6d7162fb0e65e2ab049035b06e1e058cba59f973838dc@group.calendar.google.com"
-    /* NMF          */
-    /* OCS          */
-    /* SMI          */
-    /* SUM          */
+    /* Ascapella    */ "c_bce3633a2f7469a709d6d7162fb0e65e2ab049035b06e1e058cba59f973838dc@group.calendar.google.com",
+    /* Lucas        */ "c_e1133b222f57b034f0553391ab1002f352b2e27552cec6518b92ab09dbc458fd@group.calendar.google.com",
+    /* SMI          */ "c_9d4905af5f339e086ed17346b88db6b67c5e1ca55f24a29a92a7960a82dba57a@group.calendar.google.com"
+
+    /* EKSTERNE KALENDERE */
+    /* MPO          */
 ]
 
 //Color library to apply to each individual calendar:
