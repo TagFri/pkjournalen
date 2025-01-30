@@ -12,8 +12,8 @@ const calenderIDs = [
     /* OAMS         */ "c_fc4894ab39af3f029e00684bee89a7f83c80fe44df2bd705a2ad1d0b3787256d@group.calendar.google.com",
     /* Ascapella    */ "c_bce3633a2f7469a709d6d7162fb0e65e2ab049035b06e1e058cba59f973838dc@group.calendar.google.com",
     /* Lucas        */ "c_e1133b222f57b034f0553391ab1002f352b2e27552cec6518b92ab09dbc458fd@group.calendar.google.com",
-    /* SMI          */ "c_9d4905af5f339e086ed17346b88db6b67c5e1ca55f24a29a92a7960a82dba57a@group.calendar.google.com"
-
+    /* SMI          */ "c_9d4905af5f339e086ed17346b88db6b67c5e1ca55f24a29a92a7960a82dba57a@group.calendar.google.com",
+    /* SUG          */ "c_4d3ec10c69d2ff3c3d5ade1cb47726c3eb3d55220c3eb4331829a3f2d223bd6d@group.calendar.google.com"
     /* EKSTERNE KALENDERE */
     /* MPO          */
 ]
