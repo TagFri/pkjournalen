@@ -14,6 +14,7 @@ const calenderIDs = [
     /* Lucas        */ "c_e1133b222f57b034f0553391ab1002f352b2e27552cec6518b92ab09dbc458fd@group.calendar.google.com",
     /* SMI          */ "c_9d4905af5f339e086ed17346b88db6b67c5e1ca55f24a29a92a7960a82dba57a@group.calendar.google.com",
     /* SUG          */ "c_4d3ec10c69d2ff3c3d5ade1cb47726c3eb3d55220c3eb4331829a3f2d223bd6d@group.calendar.google.com",
+    /* OCS          */ "c_f3721a7e0c8755d3c84ebdfdeb297f9f09215ffd166ad12fd24246218b886b8e@group.calendar.google.com",
     /* EKSTERNE KALENDERE */
     /* MPO          */ "hr.phormand@gmail.com"
 ]
