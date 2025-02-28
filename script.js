@@ -15,6 +15,8 @@ const calenderIDs = [
     /* SMI          */ "c_9d4905af5f339e086ed17346b88db6b67c5e1ca55f24a29a92a7960a82dba57a@group.calendar.google.com",
     /* SUG          */ "c_4d3ec10c69d2ff3c3d5ade1cb47726c3eb3d55220c3eb4331829a3f2d223bd6d@group.calendar.google.com",
     /* OCS          */ "c_f3721a7e0c8755d3c84ebdfdeb297f9f09215ffd166ad12fd24246218b886b8e@group.calendar.google.com",
+    /* OMTB         */ "c_e3f971e5e7bff2b54dd96a1ea22dd86a92624a7fb82377badc83c1b23df29dbf@group.calendar.google.com",
+    /* Revyen       */ "c_1e5e71a4d487de114ee823ab112cffddef6ebebb0657e20b2b8313855cecc071@group.calendar.google.com",
     /* EKSTERNE KALENDERE */
     /* MPO          */ "hr.phormand@gmail.com"
 ]
